@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import AvailabilityPage from '../availability/page'
-import { apiCall } from '../../lib/api'
+import { apiCall } from '../../frontend/lib/api'
 
 // Halls data for the carousel
 const hallsData = [

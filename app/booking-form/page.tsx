@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { apiCall } from '../../lib/api'
+import { apiCall } from '../../frontend/lib/api'
 
 const departments = [
   'Computer Science',

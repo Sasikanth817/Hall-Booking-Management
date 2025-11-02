@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { apiCall } from '../../lib/api'
+import { apiCall } from '../../frontend/lib/api'
 
 export default function AdminDashboardPage() {
   const [bookings, setBookings] = useState<any[]>([])

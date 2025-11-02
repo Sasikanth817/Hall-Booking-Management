@@ -3,7 +3,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Link from 'next/link'
-import { apiCall } from '../../lib/api'
+import { apiCall } from '../../frontend/lib/api'
 
 interface Hall {
   id: number;

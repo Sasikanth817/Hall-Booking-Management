@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { apiCall } from '../../lib/api'
+import { apiCall } from '../../frontend/lib/api'
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true)

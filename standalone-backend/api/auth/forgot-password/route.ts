@@ -64,6 +64,11 @@ export async function POST(request: Request) {
       user = jsonUser
     }
 
+    // Type guard to satisfy TypeScript
+    if (!user) {
+      return NextResponse.json({ message: 'No account found with this email address.' }, { status: 404 })
+    }
+
     // Generate reset token
     const resetToken = crypto.randomBytes(32).toString('hex')
     const expiresAt = new Date(Date.now() + 3600000) // 1 hour from now
@@ -110,7 +115,7 @@ export async function POST(request: Request) {
           </div>
           
           <div style="background: white; padding: 30px; border-radius: 0 0 10px 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <h2 style="color: #1f2937; margin-top: 0;">Hello ${user.name},</h2>
+            <h2 style="color: #1f2937; margin-top: 0;">Hello ${(user as any).name},</h2>
             
             <p style="color: #4b5563; line-height: 1.6;">
               We received a request to reset your password for your Centurion University account. 
